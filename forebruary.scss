@@ -1,0 +1,86 @@
+.forebruary {
+  background-color: white;
+  color: #222;
+  box-sizing: border-box;
+  padding: 0.5em;
+  border: 1px rgba(0, 0, 0, 0.2) solid;
+  border-radius: 3px;
+  box-shadow: inset 0 0 3px white;
+  cursor: default;
+  width: 15em;
+  overflow: hidden;
+  position: relative;
+  .months {
+    background-color: white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    list-style: none;
+    margin: 0;
+    padding: 2em 1em;
+    transition: transform ease-in-out 0.2s;
+    li {
+      cursor: pointer;
+      display: inline-block;
+      width: 33%;
+      text-align: center;
+      line-height: 2em;
+      box-sizing: border-box;
+      border: 1px transparent solid;
+      border-radius: 3px;
+      &:hover, &.selected {
+        border-color: dodgerblue;
+      }
+      &.selected {
+        background-color: dodgerblue;
+        color: white;
+      }
+    }
+  }
+  .header {
+    border-bottom: 1px rgba(0, 0, 0, 0.2) solid;
+    line-height: 1em;
+    padding-bottom: 0.5em;
+    margin-bottom: 0.5em;
+    color: dodgerblue;
+    .month {
+      cursor: pointer;
+    }
+    .year {
+      cursor: text;
+      float: right;
+      &:focus {
+        color: #222;
+      }
+    }
+  }
+  .container {
+    transition: transform ease-in-out 0.2s;
+    ul {
+      white-space: nowrap;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      li {
+        display: inline-block;
+        width: 2em;
+        line-height: 2em;
+        text-align: center;
+        border: 1px transparent solid;
+        box-sizing: border-box;
+        opacity: 1;
+        transition: opacity ease-in-out 0.2s;
+        border-radius: 3px;
+        &:hover, &.selected {
+          border-color: dodgerblue;
+        }
+        &.selected {
+          background-color: dodgerblue;
+          color: white;
+        }
+      }
+    }
+  }
+}
